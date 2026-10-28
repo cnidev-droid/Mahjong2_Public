@@ -1,0 +1,17 @@
+﻿<Window x:Class="Mahjong2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mahjong2"
+        mc:Ignorable="d"
+        Title="Mahjong" Height="800" Width="950" Background="#FF30552B" Closing="Window_Closing" KeyUp="Window_KeyUp">
+    <Grid>
+        <Canvas x:Name="CanBricks" HorizontalAlignment="Left" Height="700" Margin="20,20,0,0" VerticalAlignment="Top" Width="900" Loaded="CanBricks_Loaded" Background="Black">
+            <TextBlock x:Name="TxtBlWellDone" Canvas.Left="171" TextWrapping="Wrap" Text="Well done !" Canvas.Top="280" FontFamily="Ravie" FontSize="48" Foreground="#FFDCA513"/>
+        </Canvas>
+        <TextBlock x:Name="TxtBlInfo" HorizontalAlignment="Left" Margin="26,737,0,0" TextWrapping="Wrap" Text="Info" VerticalAlignment="Top" Foreground="#FFF1C911" FontSize="18"/>
+        <Button x:Name="BtnReload" Content="Reload" HorizontalAlignment="Left" Margin="769,735,0,0" VerticalAlignment="Top" Width="50" Background="#99DDDDDD" Click="BtnReload_Click"/>
+        <CheckBox x:Name="ChBoHint" Content="Hint" HorizontalAlignment="Left" Margin="705,737,0,0" VerticalAlignment="Top" Foreground="#FFF1C911" FontSize="18" Checked="ChBoHint_Checked" Unchecked="ChBoHint_Unchecked"/>
+    </Grid>
+</Window>
