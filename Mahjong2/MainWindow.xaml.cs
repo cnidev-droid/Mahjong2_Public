@@ -49,7 +49,7 @@ namespace Mahjong2
             timerRemove.Tick += new EventHandler(timerRemove_Tick);
             timerRemove.Interval = TimeSpan.FromMilliseconds(20);
 
-            BtnReload.IsEnabled = false;
+            //BtnReload.IsEnabled = false;
         }
 
         private void BtnReload_Click(object sender, RoutedEventArgs e)
@@ -60,7 +60,7 @@ namespace Mahjong2
             CanBricks.Children.Add(TxtBlWellDone);
             TxtBlWellDone.Visibility = Visibility.Hidden;
             LoadBricks();
-            BtnReload.IsEnabled = false;
+            //BtnReload.IsEnabled = false;
         }
 
         void LoadBricksBr()
@@ -1663,7 +1663,7 @@ namespace Mahjong2
                     TxtBlWellDone.Visibility = Visibility.Visible;
                     TxtBlInfo.Text = "The winner, time used:" + ts.ToString() + " At date " + DateTime.Now.ToString();
                     File.AppendAllText("PlayLog.txt", "The winner, time used:" + ts.ToString() + " At date " + time + Environment.NewLine);
-                    BtnReload.IsEnabled = true;
+                    //BtnReload.IsEnabled = true;
                 }
                 else if (parLeft==0)
                 {
@@ -1671,7 +1671,7 @@ namespace Mahjong2
                     TimeSpan ts = DateTime.Now - startTime;//bricks left
                     TxtBlInfo.Text = parLeft + " Selectable pairs. Time used:" + ts.ToString() + " At date " + DateTime.Now.ToString();
                     File.AppendAllText("PlayLog.txt", "Bricks left " + numberOfBricksLeft + " and " + parLeft + " Selectable pairs. Time used:" + ts.ToString() + " At date " + time + Environment.NewLine);
-                    BtnReload.IsEnabled = true;
+                    //BtnReload.IsEnabled = true;
                 }
             }
         }
